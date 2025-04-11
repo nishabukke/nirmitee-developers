@@ -13,7 +13,21 @@
     <title>Nirmitee Developers</title>
 </head>
 <body>
-    <header id="header">
+    <header>
+            <div id="side-menu-icon">
+                <div id="menu"><span></span></div>
+            </div>
+            <div id="side-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Project</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="whatsapp-div">
+                <a href="" class="wapp-link"> <span class="fa-brands fa-whatsapp"></span>whatsapp</a>
+            </div>
+    </header>
+    <!-- <header id="header">
         <div class="header-inner container-fluid">
             <div class="left-header-inner">
                 <img src="images/nirmitee logo.png" alt="">
@@ -25,9 +39,10 @@
                 <a href="contact.html">Contact Us</a>
             </div>
         </div>
-    </header>
+    </header> -->
 
     <main class="site-content">
+        <a href="#" id="scroll" style="display: none;"><span></span></a>
         <div class="swiper-slide">
             <img src="images/home-banner2.png" alt="">
         </div>
@@ -92,6 +107,58 @@
                             <a href="https://nishabukke.github.io/aarya-green-county/" class="arrow" target="_blank"> <i class="fas fa-arrow-right"></i> </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="amenities-section container">
+            <div class="amenity-features">
+                <div class="amenity-feature-item">
+                    <h4 class="common-heading">Amenities</h4>
+                    <div class="feature-listing">
+                        <ul>
+                            <li>Ample Parking Space</li>
+                            <li>Club House</li>  
+                            <li>Children's Swimming Pool</li>
+                            <li>Internal Cement Road</li>
+                            <li>Jogging Track</li>
+                        </ul>
+                        <ul>
+                            <li>Children's Play Area</li>
+                            <li>Landscape Garden</li>
+                            <li>Party Lawn</li>
+                            <li>Multipurpose Hall</li>
+                            <li>Best Location</li>
+                            <li>Aesthetically Vastu</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="amenity-feature-item">
+                    <h4 class="common-heading">Specifications</h4>
+                    <div class="feature-listing">
+                        <ul>
+                            <li>RCC Construction</li>
+                            <li>Flooring</li>  
+                            <li>Kitchen</li>
+                            <li>Electrical</li>
+                            <li>Toilet</li>
+                        </ul>
+                        <ul>
+                            <li>Internal Finishing</li>
+                            <li>Doors</li>
+                            <li>Windows</li>
+                            <li>External Finishing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="amenity-feature-item">
+                    <h4 class="common-heading">Near By Locations</h4>
+                    <ul>
+                        <li>Bus Stand - 1.5 km</li>
+                        <li>School - 1.5 km</li>  
+                        <li>College - 1.0 km</li>
+                        <li>Market - 1.5 km</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -271,6 +338,38 @@
     <script src="script.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        
+        var menu = document.querySelector( "#menu" );
+        var sidebar = document.querySelector( "#side-menu" );
+        var overlay = document.querySelector( "#overlay" );
+
+        menu.addEventListener( "click", function(){
+        this.classList.toggle( "active" );
+        sidebar.classList.toggle( "active" );
+        overlay.classList.toggle( "active" );
+        overlay.onclick = function () {
+            menu.classList.toggle( "active" );
+            sidebar.classList.toggle( "active" );
+            overlay.classList.toggle( "active" );
+        }
+        });
+
+        $(document).ready(function(){ 
+            $(window).scroll(function(){ 
+                if ($(this).scrollTop() > 100) { 
+                    $('#scroll').fadeIn(); 
+                } else { 
+                    $('#scroll').fadeOut(); 
+                } 
+            }); 
+            $('#scroll').click(function(){ 
+                $("html, body").animate({ scrollTop: 0 }, 600); 
+                return false; 
+            }); 
+        });
+    </script>
 
     <!-- Initialize Swiper -->
     <script>

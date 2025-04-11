@@ -109,6 +109,10 @@ h1,h2,h3,h4,h5,h6{
     border: 1px solid #d3ac6d;
 }
 
+.swiper-slide{
+    position: relative;
+}
+
 .swiper-slide img{
     width: 100%;
     height: 320px;
@@ -129,7 +133,7 @@ h1,h2,h3,h4,h5,h6{
 .common-banner-content{
     position: absolute;
     z-index: 1;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -174,7 +178,7 @@ h1,h2,h3,h4,h5,h6{
     gap: 30px;
 }
 
-.vm-item{
+.testimonial-item{
     position: relative;
     padding: 40px 24px 0px;
     border-radius: 20px 20px 20px 0;
@@ -182,19 +186,14 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 20px;
 }
 
-.vm-item img{
+.testimonial-item img{
+    color: #633d00;
     width: 50px;
     height: 50px;
     margin-bottom: 0px;
 }
 
-.vm-item .text{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.vm-item .info{
+.testimonial-item .info{
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -203,14 +202,14 @@ h1,h2,h3,h4,h5,h6{
     margin-top: 30px;
 }
 
-.vm-item .img-curv{
+.testimonial-item .img-curv{
     position: relative;
     padding: 15px;
     border-radius: 0 40px 0 0;
     background: #fff;
 }
 
-.vm-item .img-curv .shap-left-top {
+.testimonial-item .img-curv .shap-left-top {
     position: absolute;
     top: -22px;
     left: -4px;
@@ -219,12 +218,12 @@ h1,h2,h3,h4,h5,h6{
     transform: rotate(270deg);
 }
 
-.vm-item .img-curv .shap-left-top svg {
+.testimonial-item .img-curv .shap-left-top svg {
     width: 24px;
     height: 20px;
 }
 
-.vm-item .img-curv .shap-right-bottom{
+.testimonial-item .img-curv .shap-right-bottom{
     position: absolute;
     bottom: -5px;
     right: -21px;
@@ -233,7 +232,7 @@ h1,h2,h3,h4,h5,h6{
     transform: rotate(270deg);
 }
 
-.vm-item .img-curv .shap-right-bottom svg {
+.testimonial-item .img-curv .shap-right-bottom svg {
     width: 24px;
     height: 24px;
 }
@@ -265,7 +264,7 @@ h1,h2,h3,h4,h5,h6{
     flex-direction: column;
     gap: 15px;
     padding: 50px;
-    background-color: #f8d294;
+    background-color: #fffcf4;
     border-radius: 30px;
     box-shadow: 15px 15px 0px rgb(99, 61, 0, 0.8);
 }
@@ -340,6 +339,7 @@ h1,h2,h3,h4,h5,h6{
     gap: 15px;
     justify-content: space-evenly;
     padding: 35px;
+    border: 1px solid #d3ac6d;
     background-color: #fffcf4;
 }
 
@@ -376,6 +376,12 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 0px 15px;
+    border-right: 1px solid #d3ac6d;
+}
+
+.project-info-item:last-child{
+    border-right: none;
 }
 
 .project-info-item h5{
@@ -387,14 +393,19 @@ h1,h2,h3,h4,h5,h6{
 .amenity-features{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 25px;
-    justify-items: center;
+    gap: 45px;
 }
 
 .amenity-feature-item{
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.feature-listing{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
 }
 
 .amenity-feature-item h4{
