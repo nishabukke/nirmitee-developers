@@ -710,3 +710,122 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /* footer css end */
+
+/******* fade effects  *********/
+
+.reveal-wrapper {
+    overflow: hidden;
+  }
+
+.reveal{
+    position: relative;
+    opacity: 0;
+    overflow: hidden;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    overflow: hidden;
+  }
+
+.active.fade-up {
+    animation: fade-up 1s ease-in;
+  }
+
+  .active.fade-up-form {
+    animation: fade-up-form 1s ease-in;
+  }
+
+  .active.fadeInLeft {
+    animation: fadeInLeft 1.3s ease;
+  }
+  
+  .active.fadeInRight {
+    animation: fadeInRight 1.3s ease;
+  }
+  
+  .active.fadeInDown{
+    animation: fadeInDown 1.3s ease;
+  }
+  
+  .active.fadeInUp{
+    animation: fadeInUp 1.3s ease;
+  }
+
+  .active.fadeInAnimation{
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fade-up {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%,0,0);
+      transform: translate3d(-100%,0,0);
+      transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(100%,0,0);
+      transform: translate3d(100%,0,0);
+      transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-50px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } 
+  
+  @keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       transform: translateY(50px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } 
