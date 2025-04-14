@@ -939,7 +939,19 @@ h1,h2,h3,h4,h5,h6{
     }
 
     .section_lg{
-        padding: 40px 20px;
+        padding: 30px 25px;
+    }
+
+    .swiper-slide img{
+        height: 250px;
+    }
+
+    .active.fadeInAnimation{
+        animation: none;
+    }
+
+    .about-section{
+        padding-top: 0;
     }
 
     .about-inner, .left-kf-inner, .key-features .container, .amenity-features, .footer-inner{

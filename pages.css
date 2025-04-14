@@ -1048,7 +1048,7 @@ h1,h2,h3,h4,h5,h6{
     }
 
     .section_lg{
-        padding: 40px 20px;
+        padding: 40px 25px;
     }
 
     .about-inner, .left-kf-inner, .key-features .container, .amenity-features, .footer-inner, .vm-inner, .founder-inner, .contact-section, .contact-form .contact-form-group{
@@ -1089,7 +1089,12 @@ h1,h2,h3,h4,h5,h6{
     }
 
     .left-kf-inner, .projects-section{
-        gap: 15px;
+        gap: 12px;
+    }
+
+    .kf-item img {
+        width: 30px;
+        height: 30px;
     }
 
     .project-item .item .icon {
