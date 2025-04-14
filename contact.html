@@ -11,7 +11,21 @@
     <title>Nirmitee Developers</title>
 </head>
 <body>
-    <header id="header">
+    <header>
+        <div id="side-menu-icon">
+            <div id="menu"><span></span></div>
+        </div>
+        <div id="side-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="https://nishabukke.github.io/aarya-green-county/" target="_blank">Our Projects</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="whatsapp-div">
+            <a href="" class="wapp-link"> <span class="fas fa-globe"></span>Visit Our Site</a>
+        </div>
+    </header>
+    <!-- <header id="header">
         <div class="header-inner container-fluid">
             <div class="left-header-inner">
                 <a href="index.html"><img src="images/nirmitee logo.png" alt=""></a>
@@ -19,15 +33,20 @@
             <div class="right-header-inner">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="projects.html">Project</a>
+                <a href="projects.html">Our Projects</a>
                 <a href="contact.html">Contact Us</a>
             </div>
         </div>
-    </header>
+    </header> -->
 
     <main class="site-content">
         <div class="swiper-slide">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.6627873033367!2d73.84549767423567!3d18.453613771218034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb007ca2a131%3A0x31c9d9c1dab54915!2sShree%20Venkatesh%20Puram%20Association%20of%20Apartments!5e0!3m2!1sen!2sin!4v1744365714714!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="banner-overlay"></div>
+            <img src="images/common-banner1.jpg" alt="">
+
+            <div class="common-banner-content">
+                <h1 class="common-heading text-white">Contact Us</h1>
+            </div>
         </div>
 
         <section class="contact-section section_lg container">
@@ -67,11 +86,15 @@
                 </div>
             </div>
         </section>
+
+        <section class="map-section section_lg container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.6627873033367!2d73.84549767423567!3d18.453613771218034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb007ca2a131%3A0x31c9d9c1dab54915!2sShree%20Venkatesh%20Puram%20Association%20of%20Apartments!5e0!3m2!1sen!2sin!4v1744365714714!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     </main> 
 
     <footer id="footer">
         <div class="footer-inner container section_lg contact-footer">
-                <img src="images/nirmitee logo.png" alt="">
+                <img src="images/nirmitee logo.png" alt="" class="footer-logo">
                 <ul>
                     <li><span class="fw-bold fas fa-globe"></span><a href="https://maps.app.goo.gl/WwcrhLyQZNFe4Z1k7" target="_blank">Venkatesh Puram Society,
                         Khanduji Phale Nagar, Ambegaon, Pune-411 046</a></li>
@@ -87,5 +110,23 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        
+        var menu = document.querySelector( "#menu" );
+        var sidebar = document.querySelector( "#side-menu" );
+        var overlay = document.querySelector( "#overlay" );
+
+        menu.addEventListener( "click", function(){
+        this.classList.toggle( "active" );
+        sidebar.classList.toggle( "active" );
+        overlay.classList.toggle( "active" );
+        overlay.onclick = function () {
+            menu.classList.toggle( "active" );
+            sidebar.classList.toggle( "active" );
+            overlay.classList.toggle( "active" );
+        }
+        });
+    </script>
 </body>
 </html>

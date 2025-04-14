@@ -11,7 +11,21 @@
     <title>Nirmitee Developers</title>
 </head>
 <body>
-    <header id="header">
+    <header>
+        <div id="side-menu-icon">
+            <div id="menu"><span></span></div>
+        </div>
+        <div id="side-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="https://nishabukke.github.io/aarya-green-county/" target="_blank">Our Projects</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="whatsapp-div">
+            <a href="" class="wapp-link"> <span class="fas fa-globe"></span>Visit Our Site</a>
+        </div>
+    </header>
+    <!-- <header id="header">
         <div class="header-inner container-fluid">
             <div class="left-header-inner">
                 <a href="index.html"><img src="images/nirmitee logo.png" alt=""></a>
@@ -19,11 +33,11 @@
             <div class="right-header-inner">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="projects.html">Project</a>
+                <a href="projects.html">Our Our Projects</a>
                 <a href="contact.html">Contact Us</a>
             </div>
         </div>
-    </header>
+    </header> -->
 
     <main class="site-content">
         <div class="swiper-slide">
@@ -132,7 +146,7 @@
     <footer id="footer">
         <div class="footer-inner container section_lg">
             <div class="footer-item">
-                <img src="images/nirmitee logo.png" alt="">
+                <img src="images/nirmitee logo.png" alt="" class="footer-logo">
                 <ul>
                     <li><span class="fw-bold fas fa-globe"></span><a href="https://maps.app.goo.gl/WwcrhLyQZNFe4Z1k7" target="_blank">Venkatesh Puram Society,
                         Khanduji Phale Nagar, Ambegaon, Pune-411 046</a></li>
@@ -140,10 +154,6 @@
                     <li><span class="fw-bold fas fa-phone"></span> <a href="tel:+919923693241"> +91 9923 693 241</a></li>
                     <li> <span class="fw-bold fas fa-phone"></span> <a href="+919075333557">+91 9075 333 557</a></li>
                 </ul>
-                <div class="footer-imgs">
-                    <img src="images/rera-barcode.jpeg" alt="" class="rera-barcode-img">
-                    <img src="images/rera.png" alt="">
-                </div>
             </div>
             <div class="footer-item">
                 <h3 class="common-heading">Enquiry Form</h3>
@@ -168,7 +178,7 @@
                 <ul>
                     <li><a href="index.html"> Home</a></li>
                     <li><a href="about.html"> About Us</a></li>
-                    <li><a href="projects.html"> Project</a></li>
+                    <li><a href="https://nishabukke.github.io/aarya-green-county/" target="_blank"> Our Projects</a></li>
                     <li><a href="contact.html"> Contact Us</a></li>
                 </ul>
                 <div class="social-icons">
@@ -176,11 +186,30 @@
                     <a href="https://www.facebook.com/nirmiteedevelopersofficial/" target="_blank" class="fa-brands fa-facebook"></a>
                     <a href="https://www.youtube.com/@NirmiteeDevelopers" target="_blank" class="fa-brands fa-youtube"></a>
                 </div>
+                <img src="images/rera-complete.jpg" alt="">
             </div>
         </div>
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        
+        var menu = document.querySelector( "#menu" );
+        var sidebar = document.querySelector( "#side-menu" );
+        var overlay = document.querySelector( "#overlay" );
+
+        menu.addEventListener( "click", function(){
+        this.classList.toggle( "active" );
+        sidebar.classList.toggle( "active" );
+        overlay.classList.toggle( "active" );
+        overlay.onclick = function () {
+            menu.classList.toggle( "active" );
+            sidebar.classList.toggle( "active" );
+            overlay.classList.toggle( "active" );
+        }
+        });
+    </script>
 </body>
 </html>
