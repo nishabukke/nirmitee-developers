@@ -84,15 +84,15 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .wapp-link{
-    color: #fff;
-    font-family: 24px;
+    color: #633d00;
+    font-family: 28px;
     padding: 10px 25px;
     border-radius: 50px;
-    border: 1px solid #fff;
+    border: 2px solid #633d00;
 }
 
 .wapp-link:hover{
-    color: #fff;
+    color: #633d00;
     text-decoration: underline;
 }
 
@@ -110,7 +110,7 @@ h1,h2,h3,h4,h5,h6{
   cursor: pointer;
   height: 4px;
   width: 35px;
-  background: #FFFFFF;
+  background: #633d00;
   position: absolute;
   display: block;
   content: '';
